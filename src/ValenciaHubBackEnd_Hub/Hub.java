@@ -1,5 +1,4 @@
 package ValenciaHubBackEnd_Hub;
-import java.util.Objects;
 import java.io.Serializable;
 public class Hub implements Serializable{
 
@@ -45,6 +44,18 @@ public class Hub implements Serializable{
 
         }
         return true;
+    }
+
+    public contenedor MetodoExamen(int peso){
+        for(int i = 0; i < hubC.length;i++){
+            for(int j = 0; j < hubC[0].length; j++){
+                if(hubC[i][j].getPeso() >= peso){
+                    hubC[i][j].setAduanas(true);
+                    return hubC[i][j];
+                }
+            }
+        }
+        return null;
     }
 
   public boolean apilarConPrioridad(contenedor C){

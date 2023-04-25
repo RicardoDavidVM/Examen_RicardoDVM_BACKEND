@@ -53,4 +53,11 @@ public class puerto implements Serializable{
     public int contadorPaises(int hub, String país){
         return P[hub].contadorPaises(país);
     }
+
+    //METODO EXAMEN
+
+    public String Puerto(int Toneladas, int NumeroHub){
+       P[NumeroHub].MetodoExamen(Toneladas);
+       return P[NumeroHub].MetodoExamen(Toneladas).toString();
+    }
 }
